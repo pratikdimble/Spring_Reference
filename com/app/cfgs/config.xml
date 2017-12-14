@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+	xmlns:p="http://www.springframework.org/schema/p"     
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    
+ 	xsi:schemaLocation="http://www.springframework.org/schema/beans      
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+	
+		<bean class="com.app.model.address" name="addrobj" >
+				<property name="addrid" value="1001"/>
+					<property name="location" value="HYD"/>
+						<property name="pin" value="400012"/>
+		</bean>
+	<bean class="com.app.model.employee" name="emp">
+	<property name="addr">
+	<ref bean="addrobj"/></property>
+		<property name="empid" value="111"/>
+			<property name="empname" value="Sandy"/>
+			<property name="salary" value="12.36"/>
+	</bean>
+
+	</beans>
